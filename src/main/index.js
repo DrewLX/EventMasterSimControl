@@ -1,8 +1,14 @@
 'use strict'
 
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain, dialog } from 'electron'
 import * as path from 'path'
 import { format as formatUrl } from 'url'
+
+const chalk = require('chalk');
+const Store = require('electron-store');
+const store = new Store();
+const simulator = require('./simulator.js');
+simulator.setStore(store)
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -10,7 +16,10 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 let mainWindow
 
 function createMainWindow() {
-  const window = new BrowserWindow()
+  const window = new BrowserWindow({
+    width: 1000,
+    height: 900
+  })
 
   if (isDevelopment) {
     window.webContents.openDevTools()
@@ -25,6 +34,12 @@ function createMainWindow() {
       protocol: 'file',
       slashes: true
     }))
+  }
+
+  if (store.get('path')) {
+    simulator.setPath(store.get('path'))
+  } else {
+    simulator.setPath(dialog.showOpenDialog({ properties: ['openDirectory'] })[0])
   }
 
   window.on('closed', () => {
@@ -60,3 +75,35 @@ app.on('activate', () => {
 app.on('ready', () => {
   mainWindow = createMainWindow()
 })
+
+
+
+ipcMain.on('command', (event, arg) => {
+  switch(arg) {
+    case 'sim-start':
+      simulator.start()
+    break;
+    case 'sim-stop':
+      simulator.stop()
+    break;
+    case 'choose-path':
+      simulator.setPath(dialog.showOpenDialog({ properties: ['openDirectory'] })[0])
+    break;
+    default:
+      console.log(chalk.red('Unrecognised javascript button press: ') + arg)
+  }
+})
+
+ipcMain.on('config', (event, arg) => {
+    simulator.saveCurrentAsXML(arg);
+    // console.log(chalk.yellow(arg))
+})
+
+simulator.log.on('new', (log) => {
+  // console.log(chalk.yellow(log));
+  mainWindow.webContents.send('log', log)
+})
+
+setInterval(function(){
+  mainWindow.webContents.send('running', simulator.running)
+}, 1000)
