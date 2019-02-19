@@ -9,7 +9,14 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
-    "source-map-support": "^0.5.10"
+    "chalk": "^2.4.2",
+    "electron-store": "^2.0.0",
+    "lodash": "^4.17.11",
+    "source-map-support": "^0.5.10",
+    "text-encoding": "^0.7.0",
+    "vue": "^2.6.6",
+    "vue-loader": "^15.6.4",
+    "xmlbuilder": "^11.0.0"
   },
   "devDependencies": {
     "electron": "4.0.1",
