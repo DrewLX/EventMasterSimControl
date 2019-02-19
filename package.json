@@ -9,6 +9,7 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
+    "bootstrap": "^3.4.1",
     "chalk": "^2.4.2",
     "electron-store": "^2.0.0",
     "lodash": "^4.17.11",
