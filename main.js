@@ -13,10 +13,10 @@ simulator.setStore(store)
 let mainWindow
 let aboutWindow
 
-Menu.setApplicationMenu(null)
-
 function createWindow () {
-  // Create the browser window.
+
+  Menu.setApplicationMenu(null)
+
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 1000,
