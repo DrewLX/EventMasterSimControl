@@ -6,50 +6,72 @@
   <title>Event Master Simulator Controller</title>
   <link rel="stylesheet" href="./bootstrap-nick.css">
   <link rel="stylesheet" href="./drewstyle.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
-<body class="text-center" style="margin: 10px; margin-left: 50px; margin-right: 50px;">
+<body>
 
+  <div class="container">
 
-
-      <h1>Event Master Simulator Controller</h1>
+      <h1 class="text-center">Event Master Simulator Controller</h1>
 
       <hr>
+
+      <h3><i class="fas fa-info-circle"></i> About</h3>
 
       This app is an evolution upon the work started by Nick Lloyd. I had the pleasure of knowing Nick since we were both at school together, and continued to regularly work together until he died in October 2018. <br />
       <br />
       His E2 Simulator XML website was an invaluable resource and tool, however I wanted to take it a step further, and make the simulator even easier to use.<br />
+      So now you can simply configure and hit start. The app generates the XML file and starts up the simulator all for you in one window.
 
       <hr>
 
-    
-
-
-      <br />
-      I have used as much of Nick's work as possible. All his styling, html and javascript still remains. The rest of this app just adds the new functionality of passing the xml directly to the drive and executing the simulator.<br />
-      <br />
-      Simply configure your Event Master, select your cards and hit 'Start'. You will need to set a path, this should be the root of the Event Master version you wish to use. For example on a mac something like '/Applications/EventMaster-6.2.47841'. On windows it would be 'C:\Barco\EventMaster-6.2.47841'
-      <br />
-      <hr>
-      As before, this is provided as is, it should work but I do not have time to test across systems, and configs.<br />
-      However, if you have comments, questions you can get to me on social as <strong>@DrewLX</strong> or e-mail: <a href="mailto:me@drewperry.co.uk">me@drewperry.co.uk</a>
-
+      <h3><i class="fas fa-download"></i> Installation</h3>
+      <h4><i class="fab fa-apple"></i> Mac</h4>
+      <a class="btn btn-default" href="https://github.com/DrewLX/EventMasterSimControl/releases/download/0.4/E2.Sim.Control.dmg"><i class="fas fa-cloud-download-alt"></i> Download v0.4</a><br />
+      Simply open the DMG file, and drag the app into your applications folder.
+      <h4><i class="fab fa-windows"></i> Windows</h4>
+      <a class="btn btn-default" href="https://github.com/DrewLX/EventMasterSimControl/releases/download/0.4/e2-sim-control-win32-x64.zip"><i class="fas fa-cloud-download-alt"></i> Download v0.4</a><br />
+      Download the .zip file and extract it. Simply run </i>e2-sim-control.exe</i><br />I'm working on an installer and certificates to make this better but I'm not a windows user. If someone can help, please get in touch!<br />
+<br />
+View all the versions here: <a href="https://github.com/DrewLX/EventMasterSimControl/releases"><i class="fab fa-github"></i> GitHub Releases</a>
       <hr>
 
+      <h3><i class="fas fa-wrench"></i> Setup</h3>
+      Once the app is running, the first time you'll need to click the 'Set Path' button. This should be the root of the Event Master version you wish to use. <br />
+      <br />
+      For example on a mac something like <code>/Applications/EventMaster-6.2.47841</code><br /><br />
+      On windows it would be <code>C:\Barco\EventMaster-6.2.47841</code><br />
+      <br />
+      Simply configure your Event Master, select your cards and hit 'Start'.
+
+
+      <hr>
+
+      <h3><i class="fas fa-history"></i> History</h3>
       Without this turning into an obituary, I do want to recognise the help, support, time and love that Nick gave to our community. I felt I should continue his work and create this app. If Barco create something better I will certainly welcome
       it, but in the meantime I hope this can be of use to the many Event Master operators and technicians around the world. <br />
-      <br />
-      This is free software. I'm not doing this for income, just because I felt it was right. <br />
-      <br />
-      That said, I have had many people asking about donations so I have set up this page: <br />
-      <a href="#">Just Giving</a>
+
+      I have used as much of Nick's work as possible. All his styling, html and javascript still remains. The rest of this app just adds the new functionality of passing the xml directly to the drive and executing the simulator.<br />
+
 
       <hr>
-      Thanks for reading, and happy simulating<br />
-      <strong>Drew Perry</strong>
+
+      <h3><i class="far fa-envelope"></i> Contact</h3>
+      As before, this is provided as is, it should work but I do not have time to test across systems, and configs.<br />
+      However, if you have comments, questions you can get to me on social as <strong style="color: white;">@DrewLX</strong> or e-mail: <a href="mailto:me@drewperry.co.uk">me@drewperry.co.uk</a>
 
 
 
+      <hr>
+
+      <h3><i class="far fa-credit-card"></i> Donations</h3>
+      This is free software. I'm not doing this for income, just because I felt it was right.<br />
+      That said, I have had many people asking about donations so I have set up this page: <br /><br />
+      <a style="margin: auto;" href="https://widgets.justgiving.com/Button/Redirect?p=eyJUZXh0IjoiTWluZCAtIFRoZSBNZW50YWwgSGVhbHRoIENoYXJpdHkiLCJJZCI6IjgwMDJjY2FkLWIzYjYtNDA0Zi04ZTE4LTU1NjAzMGY3YmQ3YSIsIkNoYXJpdHlJZCI6MzAwLCJTaXplIjoicyIsIlJlZmVyZW5jZSI6IkdpdEgiLCJUeXBlIjoiQ2hhcml0eURvbmF0ZSJ9"><img src="https://widgets.justgiving.com/Button?p=eyJUZXh0IjoiTWluZCAtIFRoZSBNZW50YWwgSGVhbHRoIENoYXJpdHkiLCJJZCI6IjgwMDJjY2FkLWIzYjYtNDA0Zi04ZTE4LTU1NjAzMGY3YmQ3YSIsIkNoYXJpdHlJZCI6MzAwLCJTaXplIjoicyIsIlJlZmVyZW5jZSI6IkdpdEgiLCJUeXBlIjoiQ2hhcml0eURvbmF0ZSJ9" /></a>
+
+<br /><br /><br /><br />
+</div>
 
 </body>
 
