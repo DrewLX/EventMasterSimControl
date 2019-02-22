@@ -1,0 +1,29 @@
+{
+  "name": "e2-sim-control",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "repository": "https://github.com/DrewLX/EventMasterSimControl",
+  "author": "DrewLX",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^4.0.4",
+    "electron-builder": "^20.38.5",
+    "electron-packager": "^13.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "chalk": "^2.4.2",
+    "electron-store": "^2.0.0",
+    "lodash": "^4.17.11",
+    "shell": "^0.5.0",
+    "text-encoding": "^0.7.0",
+    "vue": "^2.6.6",
+    "vue-autoscroll": "^1.2.1",
+    "xmlbuilder": "^11.0.0"
+  }
+}
