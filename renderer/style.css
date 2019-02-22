@@ -349,6 +349,14 @@ div.slot.selectable.selected .connectors, div.slot.selectable.selected .connecto
     background-image: url(./img/card-hdmi-90.png)
 }
 
+#frame-2 .card-26 .connectors {
+    background-image: url(./img/card-hdmi-90.png)
+}
+
+#frame-2 .card-5 .connectors {
+    background-image: url(./img/card-dp-90.png)
+}
+
 #frame-2 .card-25 .connectors {
     background-image: url(./img/card-tc-90.png)
 }

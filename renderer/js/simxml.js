@@ -448,16 +448,16 @@ function getConfig() {
                 1: {
                     isSelectable: !0,
                     isVisible: !0,
-                    validCards: [0, 1, 2, 3, 4, 20, 21, 22, 23, 25, 50]
+                    validCards: [0, 1, 2, 3, 4, 5, 20, 21, 22, 23, 25, 26, 50]
                 },
                 2: {
                     isSelectable: !0,
                     isVisible: !0,
-                    validCards: [0, 1, 2, 3, 4, 20, 21, 22, 23, 25, 50]
+                    validCards: [0, 1, 2, 3, 4, 5, 20, 21, 22, 23, 25, 26, 50]
                 }
             },
             expansionOptions: [],
-            vpuOptions: [0, 2]
+            vpuOptions: [0, 1, 2]
         },
         3: {
             id: 3,
