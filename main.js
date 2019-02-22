@@ -120,6 +120,8 @@ simulator.log.on('new', (log) => {
 })
 
 setInterval(function(){
-  mainWindow.webContents.send('running', simulator.running)
-  mainWindow.webContents.send('path', simulator.path)
+  if (mainWindow !== null) {
+    mainWindow.webContents.send('running', simulator.running)
+    mainWindow.webContents.send('path', simulator.path)
+  }
 }, 1000)
