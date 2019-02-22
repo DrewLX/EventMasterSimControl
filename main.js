@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, ipcMain, dialog} = require('electron')
+const {app, BrowserWindow, ipcMain, dialog, Menu} = require('electron')
 const chalk = require('chalk');
 const Store = require('electron-store');
 
@@ -12,6 +12,8 @@ simulator.setStore(store)
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 let aboutWindow
+
+Menu.setApplicationMenu(null)
 
 function createWindow () {
   // Create the browser window.
@@ -31,7 +33,7 @@ if (store.get('path')) {
 }
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
