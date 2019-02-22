@@ -1,7 +1,8 @@
 {
   "name": "e2-sim-control",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "productName": "E2 Sim Control",
+  "version": "0.4",
+  "description": "Setup and Control the E2 Simulator",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
