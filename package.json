@@ -24,6 +24,7 @@
     "text-encoding": "^0.7.0",
     "vue": "^2.6.6",
     "vue-autoscroll": "^1.2.1",
+    "xml2js": "^0.4.19",
     "xmlbuilder": "^11.0.0"
   }
 }

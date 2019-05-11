@@ -26,7 +26,8 @@
   <div class="col-sm-6">
     <h2>Event Master Simulator Controller</h2>
   </div>
-  <div class="col-sm-3 align-middle">
+  <div class="col-sm-3 align-middle"><br />
+    <button class="btn btn-default drewbtnwidth" v-on:click="about()"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> About</button>
   </div>
 </div>
 
@@ -279,24 +280,23 @@
   <div class="container align-middle" id="simcontrol">
 
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-5">
 
         <button class="btn btn-default drewbtnwidth" v-if="!running" v-on:click="start()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Save & Start </button>
         <button class="btn btn-default drewbtnwidth" v-if="running" v-on:click="reload()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Save & Reload</button>
         <button class="btn btn-default drewbtnwidth" :disabled="!running" v-on:click="stop()"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop </button>
 
-        <!-- <button class="btn btn-default" v-on:click="fetchXML();"> Fetch XML</button> -->
       </div>
-      <div class="col-sm-4 text-center">
+      <div class="col-sm-2 text-center">
         <span v-if="!running" style="color: red"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Stopped</span>
         <span v-if="running" style="color: green"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Running</span>
         <br />
         <span style="color: red; font-weight: bold;">{{ error }}</span>
       </div>
-      <div class="col-sm-4 text-right">
+      <div class="col-sm-5 text-right">
         <button class="btn btn-default drewbtnwidth" v-on:click="saveAs()" title=""><span class="glyphicon glyphicon-save" aria-hidden="true"> </span> Save As</button>
+        <button class="btn btn-default drewbtnwidth" v-on:click="openXML()" title=""><span class="glyphicon glyphicon-open" aria-hidden="true"> </span> Open XML</button>
         <button class="btn btn-default drewbtnwidth" v-on:click="choosePath()" title="" id="pathbtn"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"> </span> Set Path</button>
-        <button class="btn btn-default drewbtnwidth" v-on:click="about()"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> About</button>
       </div>
     </div>
 

@@ -35,6 +35,9 @@ var app = new Vue({
       saveAs: function() {
         electron.ipcRenderer.send('saveAs', System.saveCurrent())
       },
+      openXML: function() {
+        electron.ipcRenderer.send('openXML')
+      },
       checkMismatch: function() {
         if (this.running) {
           if (!_.isEqual(System.saveCurrent(), lastStartedConfig)) {
@@ -70,6 +73,15 @@ var app = new Vue({
         })
         electron.ipcRenderer.on('path', (event, message) => {
             document.getElementById('pathbtn').title = message;
+        })
+        electron.ipcRenderer.on('openedXML', (event, message) => {
+          System.activeFrame.links = []
+          System.render()
+
+          setTimeout(function() {
+            System.digestCookie(message)
+            System.render()
+          }, 1000)
         })
 
     }

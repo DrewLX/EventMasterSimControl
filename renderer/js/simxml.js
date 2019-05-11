@@ -813,6 +813,9 @@ function EventMasterSlot(e, t, n) {
             }
             return !1
         },
+        importFromXML: function(e) {
+          this.applyConfig(this.frames[0], e.frames[0])
+        },
         firstVisit: function() {
             this.applyConfig(this.frames[0], this.config.frames[0].configs[0]), this.showFrameSelect()
         },
