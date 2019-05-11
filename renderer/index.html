@@ -26,8 +26,7 @@
   <div class="col-sm-6">
     <h2>Event Master Simulator Controller</h2>
   </div>
-  <div class="col-sm-3 align-middle"><br />
-    <button class="btn btn-default drewbtnwidth" v-on:click="about()"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> About</button>
+  <div class="col-sm-3 align-middle">
   </div>
 </div>
 
@@ -285,7 +284,7 @@
         <button class="btn btn-default drewbtnwidth" v-if="!running" v-on:click="start()"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> Save & Start </button>
         <button class="btn btn-default drewbtnwidth" v-if="running" v-on:click="reload()"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Save & Reload</button>
         <button class="btn btn-default drewbtnwidth" :disabled="!running" v-on:click="stop()"><span class="glyphicon glyphicon-stop" aria-hidden="true"></span> Stop </button>
-
+<button class="btn btn-default drewbtnwidth" v-on:click="about()"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"> </span> About</button>
       </div>
       <div class="col-sm-2 text-center">
         <span v-if="!running" style="color: red"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Stopped</span>
