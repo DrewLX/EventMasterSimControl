@@ -105,6 +105,9 @@ module.exports = {
             item.att('detectsconn', link.connection.frameConnector)
             item.att('detectunitid', link.connection.unitId)
             item.att('detectip', link.connection.ipAddress)
+            if (typeof link.connection.macAddress == "string") {
+              link.connection.macAddress = link.connection.macAddress.toLowerCase()
+            }
             item.att('detectmac', link.connection.macAddress)
           }
         }
