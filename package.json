@@ -1,7 +1,7 @@
 {
   "name": "e2-sim-control",
   "productName": "E2 Sim Control",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Setup and Control the E2 Simulator",
   "main": "main.js",
   "scripts": {
@@ -12,9 +12,8 @@
   "author": "DrewLX",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^4.0.4",
-    "electron-builder": "^20.38.5",
-    "electron-packager": "^13.1.0"
+    "electron": "^4.2.4",
+    "electron-packager": "^13.1.1"
   },
   "dependencies": {
     "chalk": "^2.4.2",
@@ -22,9 +21,9 @@
     "lodash": "^4.17.11",
     "shell": "^0.5.0",
     "text-encoding": "^0.7.0",
-    "vue": "^2.6.6",
+    "vue": "^2.6.10",
     "vue-autoscroll": "^1.2.1",
     "xml2js": "^0.4.19",
-    "xmlbuilder": "^11.0.0"
+    "xmlbuilder": "^11.0.1"
   }
 }
