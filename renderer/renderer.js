@@ -2,16 +2,14 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const electron = require('electron')
-var _ = require('lodash');
-
-let lastStartedConfig = {};
 
 var app = new Vue({
-    el: '#simcontrol',
+    el: '#app',
     data: {
         log: '',
         running: false,
-        error: ""
+        error: "",
+        visible: false
     },
     methods: {
       start: function() {
