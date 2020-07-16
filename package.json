@@ -18,7 +18,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "electron-store": "^2.0.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "shell": "^0.5.0",
     "text-encoding": "^0.7.0",
     "vue": "^2.6.10",
